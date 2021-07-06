@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation|HTML Forms</title>
+  <link rel="stylesheet" href="./style.css">
+  <html>
+
+<body>
+  <header>
+    <h1>HTML</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav id="navbar">
+    <header>
+      HTML Forms
+    </header>
+    <ul>
+      <li>
+        <a href="#HTML_Forms" class="nav-link">HTML Forms</a>
+      </li>
+      <li><a href="#Attributes" class="nav-link">Attributes</a></li>
+      <li><a href="#Elements" class="nav-link">Elements</a></li>
+      <li><a href="#Input_Types" class="nav-link">Input Types</a></li>
+      <li><a href="#Input_Attributes" class="nav-link">Input Attributes</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Main -->
+  <main id="main-doc">
+    <section class="main-section" id="HTML_Forms">
+      <header>
+
+        <!-- Introduction -->
+        <h2>HTML Forms</h2>
+      </header>
+      <p>An HTML form is used to collect user input. The user input is most often sent ot a server for processing.</p>
+      <h3>Form is mostly built of following elements and attributes.</h3>
+      <li>The &lt;form&gt; Element</li>
+      <p>It is used to create an HTML form for user input:</p>
+      <pre>
+        <code>
+          &lt;form&gt;
+          ..
+          form elements
+          ..
+          &lt;/form&gt;
+        </code>
+      </pre>
+      <li>The &lt;input&gt;Element</li>
+      <p>It is the most used form element.</p>
+      <pre>
+        <code>
+          &lt;input type="text"/"radio"/"checkbox"/"submit"/"button"&gt;
+        </code>
+      </pre>
+      <p>We will discuss in deatil further in chapter.</p>
+      <li>The &lt;label&gt; Fields</li>
+      <p>This tag defines a label for many form elements. It is useful forscreen-reader users,because the screen-reader
+        will read out loud the label when the user focus on the input element.</p>
+      <pre>
+        <code>
+          &lt;form&gt;
+          &lt;label for="id"&gt;&lt;/label&gt;
+          &lt;input type="text" id="for"&gt;
+          &lt;/form&gt;
+        </code>
+      </pre>
+      <i> NOTE: "For" should be equal to "id".</i>
+      <li>The Name Attribute for &lt;input&gt;</li>
+      <p>Notice that each input field must have a "name" attribute to be submitted. If the "name" attribute is omitted,
+        the value of input field will not be sent at all.</p>
+      <pre>
+        <code>
+          &lt;input type="text" name="name"&gt;
+        </code>
+      </pre>
+    </section>
+
+    <!-- Attributes -->
+    <section class="main-section" id="Attributes">
+      <!-- Attributes -->
+      <header>
+        <h2>Attributes</h2>
+      </header>
+      <p>Following are the mostly used attributes:</p>
+      <li>The Action Attribute</li>
+      <p>The "action" attribute defines the action to be performed when the form is submitted. Usually the form data is
+        sent to a file on the server when the user clicks on the submit button.</p>
+      <pre>
+        <code>
+          &lt;form action="/action_page.php"&gt;
+          .. 
+          ..
+          &lt;/form&gt;
+        </code>
+      </pre>
+      <li>The Target Attribute</li>
+      <p>The "target attribute specifies where to display teh response that is received after submitting the form.</p>
+      <pre>
+        <code>
+          &lt;form action="/action.php" target="_blank"/"_self"/"_parent"/"_top"/"_self"&gt;&lt;/form&gt;
+        </code>
+      </pre>
+
+      <li>The Method Attribute</li>
+      <p>The method attribute specifies the HTTP method to be used when submitting the form data.</p>
+      <pre>
+        <code>
+          &lt;form action="/action_page.php" method="get"/"post"&gt;
+        </code>
+      </pre>
+      <i>NOTE: Never use "get" to send sensitive data!</i>
+      <li>The Autocomplete Attribute</li>
+      <p>The autocomplete attribute specifies whether a form should have autocomplete on or off.</p>
+      <pre>
+        <code>
+          &lt;from action="/action_page.php" autocomplete="on"&gt;
+        </code>
+      </pre>
+      <li>The Novalidate Attribute</li>
+      <p>The novalidate attribute is a boolean attribute.
+        When present, it specifies that the form-data (input) should not be validated when submitted.</p>
+      <pre>
+        <code>
+          &lt;form action="/action_page.php" novalidate&gt;
+        </code>
+      </pre>
+    </section>
+
+    <!-- Elements -->
+    <section class="main-section" id="Elements">
+      <!-- Elements -->
+      <header>
+        <h2>Elements</h2>
+      </header>
+      <p>The HTML "form" element can contain one or more of the following form elements:</p>
+      <li>&lt;select&gt;</li>
+      <p>The "select" elements defines a drop-down list:</p>
+      <pre>
+        <code>
+          &lt;select id="cars" name="cars"&gt;
+          &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+          &lt;option value="audi"&gt;Audi&lt;/option&gt;
+          &lt;option value="Thar"&gt;Thar&lt;/option&gt;
+        </code>
+      </pre>
+      <li>&lt;textarea&gt;</li>
+      <p>The textarea elements defines a multi-line input field:</p>
+      <pre>
+        <code>
+          &lt;textarea name="message" rows="10" cols="30"&gt;
+          &lt;/textarea&gt;
+        </code>
+      </pre>
+      <li>&lt;legend&gt; and &lt;fieldset&gt;</li>
+      <p>The "fieldset" element is used to group related data in a form.</p>
+      <p>The "legend" element defines a caption for the "fieldset" element.</p>
+      <pre>
+        <code>
+          &lt;fieldset&gt;
+          &lt;legend&gt;Personalia&lt;/legend&gt;
+          ..
+          &lt;/fieldset&gt;
+        </code>
+      </pre>
+    </section>
+
+<!-- Inputs -->
+    <section class="main-section" id="Input_Types">
+      <!-- Input types -->
+      <header>
+        <h2>Input Types</h2>
+      </header>
+      <p>This chapter describes the different types for the HTML "input" element:</p>
+      <li>&lt;checkbox&gt;</li>
+      <p>It let a user select ZERO or MORE options of a limited number of choices.</p>
+      <pre>
+        <code>
+          &lt;input type="checkbox" id="vehicle1" name="vehicle1"&gt;
+          &lt;input type="checkbox" id="vehicle2"&gt;
+          &lt;input type="chrckbox" id="vehicle3"&gt;
+        </code>
+      </pre>
+      <li>&lt;password&gt;</li>
+      <p>It defines a "password" field.</p>
+      <pre>
+        <code>
+          &lt;input type="password" id="pwd" name="pwd"&gt;
+        </code>
+      </pre>
+      <li>&lt;submit&gt;</li>
+      <p>It defines a button for submitting form data to a form-handler.</p>
+      <pre>
+        <code>
+          &lt;input type="submit" value="submit"&gt;
+        </code>
+      </pre>
+    </section>
+
+
+    <!-- Input Attributes -->
+    <section class="main-section" id="Input_Attributes">
+      <header>
+        <h2>Input Attributes</h2>
+      </header>
+      <p>This chapter describes the different attributes for the HTML "input" element:</p>
+      <li>&lt;readonly&gt;</li>
+      <p>The input "readonly" attributes specifies that an input field is read-only.</p>
+      <pre>
+        <code>
+          &lt;input type="text" name="fname" value="john" readonly&gt;
+        </code>
+      </pre>
+      <li>&lt;disabled&gt;</li>
+      <p>The input "disabled" attribute specifies that an input field should be disbaled.</p>
+      <pre>
+        <code>
+          &lt;input type="text" id="fname" name="fname" value="john" disabled&gt;
+        </code>
+      </pre>
+      <li>&lt;size&gt;</li>
+      <p>The input size attributes specifies the visible width, in characters, of an input field.</p>
+      <pre>
+        <code>
+        &lt;input type="text" id="pin" name="pin" size="4"&gt; 
+        </code>
+      </pre>
+    </section>
+  </main>
+
+</body>
+</html>
